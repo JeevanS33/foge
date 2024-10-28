@@ -1,0 +1,190 @@
+.event {
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("../images/img5.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.event-list {
+    padding: 20px 30px 30px 30px;
+    background: transparent;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+.e-heading {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/banner.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20vh;
+
+}
+
+.e-heading h2 {
+    color: #2575fc;
+    letter-spacing: 30px;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+.event-list input[type="text"],
+.event-list select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+}
+
+Input focus styles .event-list input[type="text"]:focus,
+.event-list select:focus {
+    border-color: #2575fc;
+    box-shadow: 0 0 5px rgba(37, 117, 252, 0.7);
+    outline: none;
+}
+
+.event-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.event-list li {
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    position: relative;
+}
+
+.event-list-top {
+    display: flex;
+    flex-direction: row;
+    gap: 700px;
+}
+
+.event-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to right, #4e9bfc, #f85032);
+}
+
+.no-underline {
+    text-decoration: none;
+}
+
+.event-list h3 {
+    margin: 0;
+    font-size: 32px;
+    color: #2575fc;
+}
+
+
+.event-list p {
+    margin: 5px 0;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.event-list button {
+    background-color: #6a11cb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 0 5px;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+.event-list button:hover {
+    background-color: #2575fc;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .e-heading {
+        height: 20vh;
+    }
+
+    .e-heading h2 {
+        letter-spacing: 20px;
+        font-size: 40px;
+    }
+
+    .event-list-top {
+        gap: 400px;
+    }
+
+    .event-list {
+        padding: 20px;
+    }
+
+
+    .event-list h3 {
+        font-size: 1.5rem;
+    }
+
+    .event-list input[type="text"],
+    .event-list select {
+        padding: 10px;
+    }
+
+    .event-list button {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .e-heading {
+        height: 20vh;
+    }
+
+    .e-heading h2 {
+        letter-spacing: 10px;
+        font-size: 30px;
+    }
+
+    .event-list-top {
+        gap: 100px;
+        font-size: 18px;
+    }
+
+    .event-list h3 {
+        font-size: 1.4rem;
+    }
+
+    .event-list p {
+        margin: 4px 0;
+        font-size: 1rem;
+    }
+
+    .event-list input[type="text"],
+    .event-list select {
+        padding: 10px;
+        font-size: 0.7rem;
+    }
+}
