@@ -7,20 +7,20 @@ export const useAuth = () => {
 };
 
 const mockUsers = [
-  { username: "jeevan", password: "jeevans" },
-  { username: "user2", password: "pass2" },
+  { email: "jeevan636097@gmail.com", password: "jeevans" },
+  { email: "user2@example.com", password: "pass2" },
 ];
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
-  const login = (username, password) => {
+  const login = (email, password) => {
     const foundUser = mockUsers.find(
-      (user) => user.username === username && user.password === password
+      (user) => user.email === email && user.password === password
     );
 
     if (foundUser) {
-      setUser({ username });
+      setUser({ email });
       return true;
     }
     return false;
