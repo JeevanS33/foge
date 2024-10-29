@@ -7,14 +7,14 @@ import "react-toastify/dist/ReactToastify.css";
 import "./Login.css";
 
 const Login = () => {
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("jeevan636097@gmail.com");
   const [password, setPassword] = useState("");
   const { login } = useAuth();
   const navigate = useNavigate();
 
   const onFormSubmit = (e) => {
     e.preventDefault();
-    if (login(username, password)) {
+    if (login(email, password)) {
       toast.success("Login Successful!", { autoClose: 1000 });
       navigate("/");
     } else {
@@ -26,11 +26,11 @@ const Login = () => {
     <div className="login-container">
       <form className="login-form" onSubmit={onFormSubmit}>
         <h2>Login</h2>
-        <label>Username:</label>
+        <label>Email:</label>
         <input
           type="text"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
         />
         <label>Password:</label>
         <input
