@@ -56,8 +56,23 @@ const EventList = ({ events }) => {
             <li
               key={event.id}
               style={{
-                background: `url(${event.image})`,
+                background: `linear-gradient(
+                  to right,
+                  rgba(0, 0, 0, 0.9),
+                  rgba(0, 0, 0, 0.8),
+                  rgba(0, 0, 0, 0.8),
+                  rgba(0, 0, 0, 0.6),
+                  rgba(0, 0, 0, 0.5),
+                  rgba(0, 0, 0, 0.3)
+                ), url(${event.image})`,
                 backgroundSize: "cover",
+                backgroundPosition: "center",
+                padding: "20px",
+                color: "white",
+                borderRadius: "5px",
+                marginBottom: "10px",
+                position: "relative",
+                overflow: "hidden",
               }}
             >
               <Link to={`/events/${event.id}`} className="no-underline">
@@ -73,7 +88,11 @@ const EventList = ({ events }) => {
         </ul>
         <div>
           {Array.from({ length: totalPages }, (_, index) => (
-            <button key={index + 1} onClick={() => setCurrentPage(index + 1)}>
+            <button
+              key={index + 1}
+              onClick={() => setCurrentPage(index + 1)}
+              className={index + 1 === currentPage ? "active" : ""}
+            >
               {index + 1}
             </button>
           ))}
