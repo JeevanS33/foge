@@ -160,7 +160,7 @@ Input focus styles .event-list input[type="text"]:focus,
 @media (max-width: 500px) {
 
     .e-heading {
-        height: 20vh;
+        height: 10vh;
     }
 
     .e-heading h2 {

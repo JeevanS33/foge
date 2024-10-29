@@ -1,6 +1,7 @@
-import React, { useEffect, useState, useMemo } from "react";
+// src/components/EventList/EventList.js
+import React, { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
-import "../EventList/EventList.css";
+import "./EventList.css";
 
 const EventList = ({ events }) => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -55,15 +56,8 @@ const EventList = ({ events }) => {
             <li
               key={event.id}
               style={{
-                background: `linear-gradient(to right, rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(${event.image})`,
+                background: `url(${event.image})`,
                 backgroundSize: "cover",
-                backgroundPosition: "center",
-                padding: "20px",
-                color: "white",
-                borderRadius: "5px",
-                marginBottom: "10px",
-                position: "relative",
-                overflow: "hidden",
               }}
             >
               <Link to={`/events/${event.id}`} className="no-underline">
