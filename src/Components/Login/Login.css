@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     height: calc(100lvh - 10lvh);
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("../images/img5.jpg");
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/img5.jpg");
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
