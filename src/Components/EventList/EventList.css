@@ -179,7 +179,7 @@ Input focus styles .event-list input[type="text"]:focus,
 
     .event-list p {
         margin: 4px 0;
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 
     .event-list input[type="text"],
